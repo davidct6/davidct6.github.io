@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111715">
+  <meta name="description" content="David's personal engineering notebook. Exploring RF, FPGA design, and high-frequency systems through projects, experiments, and technical notes.">
+  <meta property="og:title" content="David — Signals. Logic. Hardware.">
+  <meta property="og:description" content="A personal engineering notebook at the intersection of RF, FPGA design, and high-frequency systems.">
+  <meta property="og:type" content="website">
+  <title>David — Signals. Logic. Hardware.</title>
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="#top" aria-label="David, home"><span class="brand-symbol" aria-hidden="true">d.</span> david<span class="handle"> / ct6</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation">Menu <span aria-hidden="true">+</span></button>
+    <nav id="navigation" aria-label="Main navigation">
+      <a href="#interests">Focus</a>
+      <a href="#notebook">Notebook</a>
+      <a href="#about">About</a>
+      <a class="nav-contact" href="#connect">Connect <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+  <main id="main">
+    <section id="top" class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> DAVID / ENGINEERING NOTEBOOK</p>
+        <h1 id="hero-title">Signals.<br>Logic.<br><span>Hardware.</span></h1>
+        <p class="hero-intro">I'm David. I'm exploring the space where radio frequency, programmable logic, and high-frequency hardware meet.</p>
+        <div class="hero-actions"><a class="button primary" href="#interests">Explore my focus <span aria-hidden="true">↓</span></a><a class="text-link" href="https://github.com/davidct6">Find me on GitHub <span aria-hidden="true">↗</span></a></div>
+      </div>
+      <div class="signal-panel" aria-labelledby="signal-title">
+        <div class="panel-heading"><span class="eyebrow" id="signal-title">SIGNAL EXPLORER</span><span class="panel-label">01 / TIME DOMAIN</span></div>
+        <div class="signal-meta"><span><span class="trace-dot" aria-hidden="true"></span> SINE WAVE</span><span id="signal-status">STATIC VIEW</span></div>
+        <svg id="signal-plot" viewBox="0 0 600 320" role="img" aria-labelledby="plot-title plot-desc">
+          <title id="plot-title">Illustrative sine wave</title>
+          <desc id="plot-desc">A normalized sine wave. Use the frequency and amplitude controls below to change its shape.</desc>
+          <defs><pattern id="grid" width="50" height="40" patternUnits="userSpaceOnUse"><path d="M 50 0 L 0 0 0 40" fill="none" stroke="#2c3730" stroke-width="1"/></pattern><clipPath id="plot-clip"><rect width="600" height="320"/></clipPath></defs>
+          <rect width="600" height="320" fill="url(#grid)"/>
+          <path d="M0 160H600 M300 0V320" stroke="#536047" stroke-width="1" stroke-dasharray="3 6"/>
+          <g clip-path="url(#plot-clip)"><path id="wave" d="M0,160.00 L2,154.29 L4,148.59 L6,142.95 L8,137.37 L10,131.88 L12,126.50 L14,121.25 L16,116.16 L18,111.24 L20,106.51 L22,101.99 L24,97.71 L26,93.66 L28,89.88 L30,86.38 L32,83.17 L34,80.26 L36,77.66 L38,75.39 L40,73.45 L42,71.86 L44,70.61 L46,69.72 L48,69.18 L50,69.00 L52,69.18 L54,69.72 L56,70.61 L58,71.86 L60,73.45 L62,75.39 L64,77.66 L66,80.26 L68,83.17 L70,86.38 L72,89.88 L74,93.66 L76,97.71 L78,101.99 L80,106.51 L82,111.24 L84,116.16 L86,121.25 L88,126.50 L90,131.88 L92,137.37 L94,142.95 L96,148.59 L98,154.29 L100,160.00 L102,165.71 L104,171.41 L106,177.05 L108,182.63 L110,188.12 L112,193.50 L114,198.75 L116,203.84 L118,208.76 L120,213.49 L122,218.01 L124,222.29 L126,226.34 L128,230.12 L130,233.62 L132,236.83 L134,239.74 L136,242.34 L138,244.61 L140,246.55 L142,248.14 L144,249.39 L146,250.28 L148,250.82 L150,251.00 L152,250.82 L154,250.28 L156,249.39 L158,248.14 L160,246.55 L162,244.61 L164,242.34 L166,239.74 L168,236.83 L170,233.62 L172,230.12 L174,226.34 L176,222.29 L178,218.01 L180,213.49 L182,208.76 L184,203.84 L186,198.75 L188,193.50 L190,188.12 L192,182.63 L194,177.05 L196,171.41 L198,165.71 L200,160.00 L202,154.29 L204,148.59 L206,142.95 L208,137.37 L210,131.88 L212,126.50 L214,121.25 L216,116.16 L218,111.24 L220,106.51 L222,101.99 L224,97.71 L226,93.66 L228,89.88 L230,86.38 L232,83.17 L234,80.26 L236,77.66 L238,75.39 L240,73.45 L242,71.86 L244,70.61 L246,69.72 L248,69.18 L250,69.00 L252,69.18 L254,69.72 L256,70.61 L258,71.86 L260,73.45 L262,75.39 L264,77.66 L266,80.26 L268,83.17 L270,86.38 L272,89.88 L274,93.66 L276,97.71 L278,101.99 L280,106.51 L282,111.24 L284,116.16 L286,121.25 L288,126.50 L290,131.88 L292,137.37 L294,142.95 L296,148.59 L298,154.29 L300,160.00 L302,165.71 L304,171.41 L306,177.05 L308,182.63 L310,188.12 L312,193.50 L314,198.75 L316,203.84 L318,208.76 L320,213.49 L322,218.01 L324,222.29 L326,226.34 L328,230.12 L330,233.62 L332,236.83 L334,239.74 L336,242.34 L338,244.61 L340,246.55 L342,248.14 L344,249.39 L346,250.28 L348,250.82 L350,251.00 L352,250.82 L354,250.28 L356,249.39 L358,248.14 L360,246.55 L362,244.61 L364,242.34 L366,239.74 L368,236.83 L370,233.62 L372,230.12 L374,226.34 L376,222.29 L378,218.01 L380,213.49 L382,208.76 L384,203.84 L386,198.75 L388,193.50 L390,188.12 L392,182.63 L394,177.05 L396,171.41 L398,165.71 L400,160.00 L402,154.29 L404,148.59 L406,142.95 L408,137.37 L410,131.88 L412,126.50 L414,121.25 L416,116.16 L418,111.24 L420,106.51 L422,101.99 L424,97.71 L426,93.66 L428,89.88 L430,86.38 L432,83.17 L434,80.26 L436,77.66 L438,75.39 L440,73.45 L442,71.86 L444,70.61 L446,69.72 L448,69.18 L450,69.00 L452,69.18 L454,69.72 L456,70.61 L458,71.86 L460,73.45 L462,75.39 L464,77.66 L466,80.26 L468,83.17 L470,86.38 L472,89.88 L474,93.66 L476,97.71 L478,101.99 L480,106.51 L482,111.24 L484,116.16 L486,121.25 L488,126.50 L490,131.88 L492,137.37 L494,142.95 L496,148.59 L498,154.29 L500,160.00 L502,165.71 L504,171.41 L506,177.05 L508,182.63 L510,188.12 L512,193.50 L514,198.75 L516,203.84 L518,208.76 L520,213.49 L522,218.01 L524,222.29 L526,226.34 L528,230.12 L530,233.62 L532,236.83 L534,239.74 L536,242.34 L538,244.61 L540,246.55 L542,248.14 L544,249.39 L546,250.28 L548,250.82 L550,251.00 L552,250.82 L554,250.28 L556,249.39 L558,248.14 L560,246.55 L562,244.61 L564,242.34 L566,239.74 L568,236.83 L570,233.62 L572,230.12 L574,226.34 L576,222.29 L578,218.01 L580,213.49 L582,208.76 L584,203.84 L586,198.75 L588,193.50 L590,188.12 L592,182.63 L594,177.05 L596,171.41 L598,165.71 L600,160.00" fill="none" stroke="#d7f48b" stroke-width="2.5" stroke-linecap="round"/></g>
+        </svg>
+        <div class="axis-labels" aria-hidden="true"><span>0</span><span>NORMALIZED TIME →</span><span>1</span></div>
+        <div class="signal-controls" id="signal-controls" hidden>
+          <label for="frequency">Frequency <output id="frequency-value" for="frequency">3 cycles</output><input id="frequency" type="range" min="1" max="8" step="0.5" value="3"></label>
+          <label for="amplitude">Amplitude <output id="amplitude-value" for="amplitude">0.70</output><input id="amplitude" type="range" min="0.1" max="1" step="0.05" value="0.7"></label>
+        </div>
+        <div class="panel-footer"><span>Illustrative signal · normalized units</span><button id="animate" type="button" aria-pressed="false" hidden>Animate <span aria-hidden="true">▶</span></button></div>
+        <noscript><p class="no-script">Enable JavaScript to explore the signal controls.</p></noscript>
+      </div>
+      <div class="hero-bottom"><span>A PERSONAL SPACE FOR TECHNICAL CURIOSITY</span><span>RF / FPGA / HIGH FREQUENCY</span></div>
+    </section>
+    <section id="interests" class="section wrap" aria-labelledby="focus-title">
+      <div class="section-heading"><p class="eyebrow">01 / FOCUS</p><h2 id="focus-title">Three fields.<br>One connected interest.</h2><p>From the behavior of a signal to the hardware that processes it. These are the areas I'm working toward.</p></div>
+      <div class="focus-grid">
+        <article class="focus-item"><span class="item-number">01</span><div class="technical-mark" aria-hidden="true">~</div><h3>RF &amp; signals</h3><p>Radio-frequency systems, signal chains, and the connection between simulation and measurement.</p><ul class="tags" aria-label="RF topics"><li>RF systems</li><li>Signal processing</li><li>Measurement</li></ul></article>
+        <article class="focus-item"><span class="item-number">02</span><div class="technical-mark logic-mark" aria-hidden="true">[01]</div><h3>FPGA &amp; digital logic</h3><p>Programmable hardware and the path from an algorithm to a real-time digital implementation.</p><ul class="tags" aria-label="FPGA topics"><li>Digital design</li><li>DSP</li><li>Verification</li></ul></article>
+        <article class="focus-item"><span class="item-number">03</span><div class="technical-mark" aria-hidden="true">↗</div><h3>High-frequency hardware</h3><p>The physical side of fast signals: interconnects, board layout, and the details that shape system behavior.</p><ul class="tags" aria-label="Hardware topics"><li>Signal integrity</li><li>PCB design</li><li>Interconnects</li></ul></article>
+      </div>
+    </section>
+    <section id="notebook" class="notebook-section">
+      <div class="wrap section">
+        <div class="section-heading"><p class="eyebrow">02 / NOTEBOOK</p><h2 id="notebook-title">Make it.<br>Measure it. Write it down.</h2><p>This notebook is just getting started. These are planned topics, ready to become detailed write-ups as the work takes shape.</p></div>
+        <div class="notebook-list" aria-labelledby="notebook-title">
+          <details class="notebook-entry"><summary><span class="entry-number">001</span><span class="entry-title">From simulation to the bench<span class="entry-category">RF / MEASUREMENT</span></span><span class="planned">Planned</span><span class="entry-expand" aria-hidden="true">+</span></summary><div class="entry-body"><p>A future RF project write-up: define the target response, document the setup, and compare a simulation with measurements.</p><p class="entry-note">No project results have been published here yet.</p></div></details>
+          <details class="notebook-entry"><summary><span class="entry-number">002</span><span class="entry-title">A signal-processing idea in hardware<span class="entry-category">FPGA / DIGITAL DESIGN</span></span><span class="planned">Planned</span><span class="entry-expand" aria-hidden="true">+</span></summary><div class="entry-body"><p>A future FPGA project exploring the decisions between an algorithm and its implementation: numeric precision, latency, verification, and resource use.</p><p class="entry-note">No project results have been published here yet.</p></div></details>
+          <details class="notebook-entry"><summary><span class="entry-number">003</span><span class="entry-title">When the interconnect becomes part of the circuit<span class="entry-category">HIGH FREQUENCY / HARDWARE</span></span><span class="planned">Planned</span><span class="entry-expand" aria-hidden="true">+</span></summary><div class="entry-body"><p>A future technical note about fast signals and physical implementation, with room for diagrams, assumptions, and observations from the bench.</p><p class="entry-note">No project results have been published here yet.</p></div></details>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="section wrap about-section" aria-labelledby="about-title">
+      <div><p class="eyebrow">03 / ABOUT</p><h2 id="about-title">Hi, I'm David.</h2></div>
+      <div class="about-copy"><p class="large-copy">Curious about what happens<br>between theory and working hardware.</p><p>I'm building this space to share my interests in RF, FPGA design, and high-frequency systems, and to document the projects and lessons along the way.</p><p>My long-term goal is to develop an independent consulting practice in these areas. For now, this is a growing personal portfolio and a place to connect with people who enjoy the same engineering problems.</p><a class="text-link" href="https://github.com/davidct6">Follow the work on GitHub <span aria-hidden="true">↗</span></a></div>
+    </section>
+    <section id="connect" class="wrap contact-section" aria-labelledby="contact-title"><div><p class="eyebrow">04 / CONNECT</p><h2 id="contact-title">Good work starts<br>with a conversation.</h2><p>Interested in RF, programmable logic, or high-frequency hardware?<br>Find me on GitHub and follow along.</p></div><a class="button primary" href="https://github.com/davidct6">Visit my GitHub <span aria-hidden="true">↗</span></a></section>
+  </main>
+  <footer class="wrap site-footer"><a class="wordmark" href="#top"><span class="brand-symbol" aria-hidden="true">d.</span> david<span class="handle"> / ct6</span></a><p>© <span id="year">2026</span> David. Built with curiosity.</p><a class="text-link" href="#top">Back to top <span aria-hidden="true">↑</span></a></footer>
+</body>
+</html>
